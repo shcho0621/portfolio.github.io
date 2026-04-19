@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부 프로젝트 상세 | 조수현 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <style>
+        /* Viewer Specific Styles - 독립적인 게시글 느낌을 위해 오버라이드 */
+        body { 
+            background-color: #ffffff; /* 뷰어 전용 깨끗한 하얀 배경 */
+        }
+        .viewer-header {
+            padding: 120px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+        }
+        .viewer-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .viewer-meta {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .viewer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #333; 
+            padding-bottom: 150px;
+        }
+        .viewer-content h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-primary);
+        }
+        .viewer-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            padding: 1.2rem 2.5rem;
+            background: rgba(0,0,0,0.05);
+            color: var(--text-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .portfolio-placeholder-viewer {
+            width: 100%;
+            height: 350px;
+            background: rgba(0,0,0,0.02);
+            border: 2px dashed rgba(0,0,0,0.15);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin: 2.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo1-배경제거.png" alt="Soohyun 로고" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">메인</a></li>
+                <li><a href="index.html#about">자기소개</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropbtn">프로젝트</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="category1.html">콘텐츠 기획 및 비평</a>
+                        <a href="category2.html">미디어 산업 기획 및 분석</a>
+                        <a href="category3.html">디지털 서비스 및 디자인 실무</a>
+                        <a href="category4.html">학내ㆍ외 활동</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Viewer Header -->
+    <header class="viewer-header fade-up">
+        <div class="container">
+            <h1 class="viewer-title">텍스트의 재해석</h1>
+            <p class="viewer-meta">콘텐츠 기획 및 비평 카테고리 &nbsp;|&nbsp; 세부 프로젝트 가이드</p>
+        </div>
+    </header>
+
+    <!-- Viewer Content -->
+    <main class="viewer-content fade-up delay-1 container">
+        <p>기존 문학 작품에서 영감을 얻어 새로운 타겟 시청자를 위한 영상을 기획한 과정입니다. 꼼꼼한 타겟 분석과 시장 조사를 진행했습니다. 텍스트 속에 숨겨진 메시지를 발굴하여 대중이 향유할 수 있는 다채로운 포맷으로 변환하는 과정에서 큰 보람을 느꼈습니다.</p>
+        
+        <div class="portfolio-placeholder-viewer">
+            🖼️ <span>장표(기획서) 슬라이드 이미지 또는 기획 상세 설명이 들어갈 자리입니다</span>
+        </div>
+
+        <h2>시장 분석 및 타겟팅</h2>
+        <p>플랫폼 특성에 맞게 콘텐츠가 소비되는 패턴을 분석하고, 2030 세대를 타겟으로 맞춤형 기획을 진행하여 초기 기획안을 도출했습니다.</p>
+        
+        <div class="portfolio-placeholder-viewer" style="height:200px;">
+            🖼️ <span>분석 차트 또는 와이어프레임 캡처 이미지</span>
+        </div>
+
+        <h2>결과 및 인사이트</h2>
+        <p>이 결과물을 통해 텍스트 속에 숨겨진 메시지가 플랫폼 특성에 맞게 어떻게 효과적으로 대중에게 가닿을 수 있는지를 입증했습니다.</p>
+        
+        <div style="text-align: center;">
+            <a href="category1.html" class="back-link">← 이전 페이지로 돌아가기</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Jo Soohyun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

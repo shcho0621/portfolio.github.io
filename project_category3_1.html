@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메타버스 STARDIUM 기획안 | 조수현 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Viewer Specific Styles */
+        body { background-color: #fcfcfc; }
+        .viewer-header {
+            padding: 120px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        .viewer-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .viewer-meta {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .viewer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #333; 
+            padding-bottom: 40px;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 3rem 4rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
+            margin-bottom: 3rem;
+        }
+        .viewer-content h2 {
+            font-size: 1.8rem;
+            margin: 3.5rem 0 1.5rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+        .viewer-content h2:first-child {
+            margin-top: 0;
+        }
+        .viewer-content h3 {
+            font-size: 1.3rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+        .viewer-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1.2rem 2.5rem;
+            background: rgba(0,0,0,0.05);
+            color: var(--text-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: #baf2b8; /* Category 3 Light Green */
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(150, 230, 161, 0.3);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(150, 230, 161, 0.5);
+            color: #1a1a2e;
+        }
+        .meta-tags {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            background: #f0f0f0;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .highlight-quote {
+            font-family: 'a그해여름', 'aGeuhaeyeoreum', 'Nanum Brush Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 400;
+            text-align: center;
+            color: #85cc90; /* Category 3 Green text */
+            margin: 0 0 2.5rem 0;
+            padding: 0 0 2.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: none;
+            border-radius: 0;
+            font-style: normal;
+            box-shadow: none;
+            line-height: 1.5;
+        }
+        ul {
+            padding-left: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .highlight-quote {
+                font-size: 1rem;
+                white-space: normal;
+                padding: 1.5rem 1rem;
+            }
+            .viewer-title {
+                font-size: 2rem;
+                word-break: keep-all;
+                padding: 0 10px;
+            }
+            .content-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo1-배경지우기.png" alt="Soohyun 로고" class="logo-img" onerror="this.src='logo1-배경제거.png'">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">메인</a></li>
+                <li><a href="index.html#about">자기소개</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropbtn">프로젝트</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="category1.html">OSMU 기반 콘텐츠 기획</a>
+                        <a href="category2.html">시장 및 트렌드 분석 전략</a>
+                        <a href="category3.html">브랜드/디지털 마케팅 및 기획</a>
+                        <a href="category4.html">교내외 활동</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Viewer Header -->
+    <header class="viewer-header fade-up">
+        <div class="container">
+            <h1 class="viewer-title">메타버스 STARDIUM 기획안</h1>
+            <p class="viewer-meta">기획 연도: 2023년 &nbsp;|&nbsp; 브랜드/디지털 마케팅 및 기획</p>
+            <div style="text-align: left; margin-top: 3rem; margin-bottom: -15px;">
+                <a href="category3.html" style="display:inline-block; color: var(--text-secondary); text-decoration: none; font-weight: 600; border: 1px solid rgba(0,0,0,0.1); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.95rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">← 이전 페이지로</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Viewer Content -->
+    <main class="viewer-content fade-up delay-1 container">
+        
+        <div class="content-box">
+
+            <div class="highlight-quote" style="font-size: 2rem; line-height: 1.6;">
+                "디지털 가상 세계와 K-POP의 시너지:<br>STARDIUM을 통한 버츄얼 엔터테인먼트의 확장성 제안"
+            </div>
+
+
+            <h2>1. 프로젝트 개요 및 배경</h2>
+            <p><strong>콘텐츠 정의:</strong> 유저가 직접 나만의 버츄얼 아이돌을 만들고 육성하는 '시뮬레이션 메타버스 게임'.</p>
+            <p><strong>기획 배경:</strong> 1020 세대의 높은 메타버스 이용률과 급성장하는 버츄얼 캐릭터 시장에 주목하여, 기존 게임들과 차별화된 '커스터마이징'과 '수익 창출 플랫폼'의 결합을 시도.</p>
+
+            <h2>2. 시장 및 타깃 분석</h2>
+            <p><strong>시장 분석:</strong> 연령별 메타버스 이용률 데이터를 바탕으로 타깃의 디지털 활동성 입증. '버츄얼 아이돌'에 대한 관심 증가를 포착하여 레드오션인 메타버스 시장에서 '육성 및 창작물 등록'이라는 틈새 시장 발견.</p>
+            <p><strong>핵심 타깃:</strong> 메타버스 환경에 익숙하고 개성 표현을 중시하는 Z세대(10대 미만~20대).</p>
+
+            <h2>3. 브랜드 차별화 전략</h2>
+            <p><strong>사용자 참여형 창작 생태계:</strong> 단순히 게임을 플레이하는 것을 넘어, 유저가 직접 제작한 아이템을 '창작물 등록'을 통해 수익화할 수 있는 'C2E(Create to Earn)' 모델 제시.</p>
+            <p><strong>기술적 시너지:</strong> 디지털 휴먼 기술과 AR 이모지 기술을 활용하여 콘텐츠 퀄리티를 높이고, 메타버스 기업과의 협업을 통한 실현 가능성 확보.</p>
+            <p><strong>확장성:</strong> K-POP 아이돌과의 협업, 버츄얼 아이돌 굿즈 제작 등 온-오프라인을 넘나드는 비즈니스 확장 모델 구축.</p>
+
+            <h2>4. 비즈니스 경쟁력</h2>
+            <p><strong>S(강점):</strong> 향유 목적의 구분(육성 vs 소셜)을 통한 다양한 유저 유입 가능성.</p>
+            <p><strong>O(기회):</strong> 초기 단계인 버츄얼 아이돌 게임 시장 선점을 통한 독점적 지위 확보.</p>
+            <p><strong>수익 구조:</strong> 앱 내 가상 재화 활성화를 통한 자체 경제 생태계 구축 및 스타디움만의 새로운 브랜드 생태계 제안.</p>
+
+        </div>
+
+        <div style="text-align: center;">
+            <a href="%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC3%20%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/STARDIUM%20%EA%B8%B0%ED%9A%8D%EC%95%88.pdf" target="_blank" class="download-btn">📄 메타버스 STARDIUM 기획안.pdf (첨부파일)</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="category3.html" class="back-link">← 이전 페이지로 돌아가기</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Jo Soohyun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
