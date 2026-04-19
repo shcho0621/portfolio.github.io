@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업스토어 분석 | 조수현 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Viewer Specific Styles */
+        body { background-color: #fcfcfc; }
+        .viewer-header {
+            padding: 120px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        .viewer-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .viewer-meta {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .viewer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #333; 
+            padding-bottom: 40px;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 3rem 4rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
+            margin-bottom: 3rem;
+        }
+        .viewer-content h2 {
+            font-size: 1.8rem;
+            margin: 3.5rem 0 1.5rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+        .viewer-content h2:first-child {
+            margin-top: 0;
+        }
+        .viewer-content h3 {
+            font-size: 1.3rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+        .viewer-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1.2rem 2.5rem;
+            background: rgba(0,0,0,0.05);
+            color: var(--text-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: #c2e9fb; /* Category 2 Light Blue */
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(161, 196, 253, 0.3);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(161, 196, 253, 0.5);
+            color: #1a1a2e;
+        }
+        .meta-tags {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            background: #f0f0f0;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .highlight-quote {
+            font-family: 'a그해여름', 'aGeuhaeyeoreum', 'Nanum Brush Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 400;
+            text-align: center;
+            color: #a1c4fd; /* Category 2 Blue text */
+            margin: 0 0 2.5rem 0;
+            padding: 0 0 2.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: none;
+            border-radius: 0;
+            font-style: normal;
+            box-shadow: none;
+            line-height: 1.5;
+        }
+        ul {
+            padding-left: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .highlight-quote {
+                font-size: 1rem;
+                white-space: normal;
+                padding: 1.5rem 1rem;
+            }
+            .content-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo1-배경지우기.png" alt="Soohyun 로고" class="logo-img" onerror="this.src='logo1-배경제거.png'">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">메인</a></li>
+                <li><a href="index.html#about">자기소개</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropbtn">프로젝트</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="category1.html">OSMU 기반 콘텐츠 기획</a>
+                        <a href="category2.html">시장 및 트렌드 분석 전략</a>
+                        <a href="category3.html">브랜드/디지털 마케팅 및 기획</a>
+                        <a href="category4.html">교내외 활동</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Viewer Header -->
+    <header class="viewer-header fade-up">
+        <div class="container">
+            <h1 class="viewer-title">팝업스토어 분석</h1>
+            <p class="viewer-meta">작성 연도: 2024년 &nbsp;|&nbsp; 시장 및 트렌드 분석 전략</p>
+            <div style="text-align: left; margin-top: 3rem; margin-bottom: -15px;">
+                <a href="category2.html" style="display:inline-block; color: var(--text-secondary); text-decoration: none; font-weight: 600; border: 1px solid rgba(0,0,0,0.1); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.95rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">← 이전 페이지로</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Viewer Content -->
+    <main class="viewer-content fade-up delay-1 container">
+        
+        <div class="content-box">
+
+            <div class="highlight-quote" style="font-size: 2rem; line-height: 1.6;">
+                "데이터와 무의식 분석으로 설계한 공간 전략:<br>잘트만 은유 기법(ZMET)을 활용한 OTT 팝업스토어 트렌드 연구"
+            </div>
+
+            <h2>1. 분석 배경 및 개요</h2>
+            <p><strong>분석 목적:</strong> 단순 시청을 넘어 체험형 소비를 원하는 사용자 트렌드 분석 및 넷플릭스 팝업스토어 기획을 위한 기초 데이터 확보.</p>
+            <p><strong>방법론의 전문성:</strong> '네이버 데이터랩'을 통한 정량적 관심도 추이 분석과 '잘트만 은유 기법(ZMET)'을 통한 사용자의 심층적 무의식 분석을 병행하여 다각적 인사이트 도출.</p>
+
+            <h2>2. 시장 및 소비자 트렌드</h2>
+            <p><strong>팝업스토어의 가치 변화:</strong> 단순 제품 판매 공간에서 '브랜드 가치 경험'과 '사회적 공유'의 장으로 진화.</p>
+            <p><strong>타운워칭(Town Watching) 결과:</strong> 소비자들이 직접 체험하고 경험하도록 설계된 공간에 대한 선호도가 높으며, 한정된 기간과 공간이 주는 '희소성'이 주요 소비 동기임을 도출.</p>
+            <p><strong>SNS 데이터 분석:</strong> 인스타그램 등을 통해 팝업스토어가 '인증샷' 문화를 넘어 하나의 문화적 테마로 자리 잡았음을 확인.</p>
+
+            <h2>3. OTT 사용자 심층 분석 (ZMET - 잘트만 은유 기법)</h2>
+            <p><strong>핵심 키워드 도출:</strong> 넷플릭스 사용자의 무의식 속 핵심 키워드로 '공유'와 '휴식' 도출.</p>
+            <p><strong>시사점:</strong> OTT 팝업스토어는 단순히 콘텐츠를 보여주는 곳이 아니라, 사용자가 '가장 편안하게 연결되는 경험'을 제공하는 공간이어야 함을 입증.</p>
+
+            <h2>4. 전략적 방향성 제시</h2>
+            <p><strong>체험형 콘텐츠 강화:</strong> 타운워칭을 통해 확인된 '체험 위주 설계' 트렌드를 반영하여, 넷플릭스 세계관을 직접 경험할 수 있는 공간 구성 제안.</p>
+            <p><strong>사회적 연결성 극대화:</strong> 잘트만 분석에서 도출된 '공유' 가치를 실현하기 위해, 방문객들이 서로 소통하거나 SNS로 경험을 확산할 수 있는 장치 마련.</p>
+            <p><strong>공간의 키워드화:</strong> 팝업스토어의 테마를 '가족', '휴식', '다양성' 등 사용자가 선호하는 핵심 가치와 매칭하여 브랜드 로열티 강화.</p>
+
+        </div>
+
+        <div style="text-align: center;">
+            <a href="%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC2%20%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/%ED%8C%9D%EC%97%85%EC%8A%A4%ED%86%A0%EC%96%B4%20%EB%B6%84%EC%84%9D.pdf" target="_blank" class="download-btn">📄 팝업스토어 분석.pdf (첨부파일)</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="category2.html" class="back-link">← 이전 페이지로 돌아가기</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Jo Soohyun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

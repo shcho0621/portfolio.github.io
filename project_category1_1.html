@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구애의 시간 기획안 | 조수현 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Viewer Specific Styles */
+        body { background-color: #fcfcfc; }
+        .viewer-header {
+            padding: 120px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        .viewer-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .viewer-meta {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .viewer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #333; 
+            padding-bottom: 40px;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.85); /* 불투명도를 약간 낮춤 (85% 불투명) */
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 3rem 4rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
+            margin-bottom: 3rem;
+        }
+        .viewer-content h2 {
+            font-size: 1.8rem;
+            margin: 3.5rem 0 1.5rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+        .viewer-content h2:first-child {
+            margin-top: 0;
+        }
+        .viewer-content h3 {
+            font-size: 1.3rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+        .viewer-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1.2rem 2.5rem;
+            background: rgba(0,0,0,0.05);
+            color: var(--text-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: #ffc2d1; /* 연락처 메일 배경색 */
+            color: #1a1a2e; /* 텍스트 식별을 위한 진한 색상 */
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(255, 194, 209, 0.3);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 194, 209, 0.5);
+            color: #1a1a2e;
+        }
+        .meta-tags {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            background: #f0f0f0;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .highlight-quote {
+            font-family: 'a그해여름', 'aGeuhaeyeoreum', 'Nanum Brush Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 400;
+            text-align: center;
+            color: #ff8fa3; /* 메인화면 링크 등에 쓰인 포인트 핑크 색상 */
+            margin: 0 0 2.5rem 0;
+            padding: 0 0 2.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: none;
+            border-radius: 0;
+            font-style: normal;
+            box-shadow: none;
+            line-height: 1.5;
+        }
+        ul {
+            padding-left: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .highlight-quote {
+                font-size: 1rem;
+                white-space: normal;
+                padding: 1.5rem 1rem;
+            }
+            .content-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo1-배경제거.png" alt="Soohyun 로고" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">메인</a></li>
+                <li><a href="index.html#about">자기소개</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropbtn">프로젝트</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="category1.html">OSMU 기반 콘텐츠 기획</a>
+                        <a href="category2.html">시장 및 트렌드 분석 전략</a>
+                        <a href="category3.html">브랜드/디지털 마케팅 및 기획</a>
+                        <a href="category4.html">교내외 활동</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Viewer Header -->
+    <header class="viewer-header fade-up">
+        <div class="container">
+            <h1 class="viewer-title">구애의 시간</h1>
+            <p class="viewer-meta">기획 연도: 2024년 &nbsp;|&nbsp; OSMU 기반 콘텐츠 기획</p>
+            <div style="text-align: left; margin-top: 3rem; margin-bottom: -15px;">
+                <a href="category1.html" style="display:inline-block; color: var(--text-secondary); text-decoration: none; font-weight: 600; border: 1px solid rgba(0,0,0,0.1); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.95rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">← 이전 페이지로</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Viewer Content -->
+    <main class="viewer-content fade-up delay-1 container">
+        
+        <!-- 텍스트 가독성을 위한 흰색 박스 컨테이너 -->
+        <div class="content-box">
+            
+            <!-- 두 줄 고정 텍스트 (본문 박스 안으로 합쳐짐) -->
+            <div class="highlight-quote">
+                "굴레가 된 도술의 힘,<br>서로의 구속(<span style="font-family: 'Pretendard Variable', Pretendard, sans-serif; font-weight: 700;">拘束</span>)을 풀어가는 두 후손의 판타지 로맨스"
+            </div>
+
+            <h2>1. 프로젝트 개요</h2>
+            <div class="meta-tags">
+                <span class="meta-tag">제작 분야: 웹툰</span>
+                <span class="meta-tag">장르: 현대 판타지, 로맨스, 액션</span>
+                <span class="meta-tag">원천 IP: 고전 소설 &lt;전우치전&gt;</span>
+            </div>
+            <p style="margin-top: 1.5rem;"><strong>로그라인:</strong> 과거의 트라우마로 도술을 거부하는 전우치의 후손 '전우연'이 저주에 걸린 강림 도령의 후손 '강하림'을 만나, 서로의 결핍을 채우며 진정한 도사로 성장해가는 이야기.</p>
+
+            <h2>2. 기획 의도</h2>
+            <p><strong>고전 IP의 현대적 재발견:</strong> 2000년대 초반에 머물러 있는 &lt;전우치전&gt; 활용 콘텐츠의 공백을 파악하고, 전우치 본인이 아닌 '후손'이라는 설정을 통해 현대적 판타지 서사를 구축.</p>
+            <p><strong>중의적 메시지 전달:</strong> 사랑을 구하는 '구애(求愛)'와 도술이라는 굴레에 얽매인 '구애(拘礙)'라는 두 가지 의미를 담아, 운명에 맞서는 주인공의 심리적 갈등을 시각화.</p>
+
+            <h2>3. 원작 분석 및 각색 포인트</h2>
+            <p><strong>핵심 각색:</strong> 원작의 '도술'과 '영웅적 면모'라는 키워드는 유지하되, 주인공을 '도술을 거부하는 현대인'으로 설정하여 내적 갈등을 극대화.</p>
+
+            <h2>4. 상세 기획 내용</h2>
+            <p><strong>세계관:</strong> 과거 조선시대, 요괴를 물리치던 '선력파'와 욕망을 쫓던 '천술파'의 대립이 수백 년이 흐른 현대까지 후손들의 힘을 통해 이어지고 있는 세계관.</p>
+            
+            <h3>주요 캐릭터</h3>
+            <ul>
+                <li><strong>전우연(여):</strong> 전우치의 후손. 과거 사고로 인해 도술 사용에 트라우마가 있으나, 잠재된 강력한 도력을 가진 인물.</li>
+                <li><strong>강하림(남):</strong> 저주를 풀기 위해 전우연의 도력이 필요한 인물. 냉소적이지만 점차 우연에게 동화됨.</li>
+            </ul>
+
+            <h3>주요 시나리오</h3>
+            <p style="margin-bottom: 0;">전설적인 도사 전우치의 후손인 전우연은 과거 도술과 관련된 사고로 인해 자신의 능력을 부정하며 트라우마 속에 살아간다. 그러던 어느 날, 도력을 사용할수록 생명력을 잃는 저주에 걸린 강하림이 나타나 그녀에게 저주를 풀어달라고 간청하며 우연의 일상을 흔들어 놓는다. 우연은 하림의 부탁을 거절하지만, 요괴들이 벌이는 사건에 휘말려 목숨을 잃을 위기에 처하고 결국 자신을 구해준 하림을 살리기 위해 도술을 다시 시작한다.</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC1%20%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC/%EA%B5%AC%EC%95%A0%EC%9D%98%20%EC%8B%9C%EA%B0%84.pdf" target="_blank" class="download-btn">📄 구애의 시간.pdf (첨부파일)</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="category1.html" class="back-link">← 이전 페이지로 돌아가기</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Jo Soohyun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
