@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시장 및 트렌드 분석 전략 | 조수현 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <style>
+        .category-header {
+            padding: 150px 0 60px;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 5%;
+        }
+        .gallery-item {
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+        .gallery-item .thumbnail {
+            width: 100%;
+            height: 250px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item .thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+            border-radius: 16px;
+        }
+        .gallery-item-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo1-배경제거.png" alt="Soohyun 로고" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">메인</a></li>
+                <li><a href="index.html#about">자기소개</a></li>
+                <li class="dropdown">
+                    <a href="index.html#projects" class="dropbtn">프로젝트</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="category1.html">OSMU 기반 콘텐츠 기획</a>
+                        <a href="category2.html">시장 및 트렌드 분석 전략</a>
+                        <a href="category3.html">브랜드/디지털 마케팅 및 기획</a>
+                        <a href="category4.html">교내외 활동</a>
+                    </div>
+                </li>
+                <li><a href="index.html#contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="category-header fade-up">
+        <div class="container">
+            <h1 class="main-title">시장 및 트렌드 분석 전략</h1>
+            <p class="sub-title">데이터를 바탕으로 미디어 산업의 흐름과 타깃을 분석하여 전략적 콘텐츠 방향성을 제시합니다.</p>
+        </div>
+    </header>
+
+    <main class="gallery-grid fade-up delay-1">
+        
+        <!-- Product 1 -->
+        <a href="project_category2_1.html" class="gallery-item">
+            <div class="thumbnail" style="padding:0; background:transparent;">
+                <img src="images/project_2_disney.png" alt="디즈니 사례 분석" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="gallery-item-title">디즈니 사례 분석</div>
+        </a>
+
+        <!-- Product 2 -->
+        <a href="project_category2_2.html" class="gallery-item">
+            <div class="thumbnail" style="padding:0; background:transparent;">
+                <img src="images/마지막 기억 이미지.png" alt="마지막 기억" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="gallery-item-title">마지막 기억</div>
+        </a>
+
+        <!-- Product 3 -->
+        <a href="project_category2_3.html" class="gallery-item">
+            <div class="thumbnail" style="padding:0; background:transparent;">
+                <img src="images/project_2_lifebeautiful.png" alt="인생은 아름다워 투자제안서" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="gallery-item-title">인생은 아름다워 투자제안서</div>
+        </a>
+
+        <!-- Product 4 -->
+        <a href="project_category2_4.html" class="gallery-item">
+            <div class="thumbnail" style="padding:0; background:transparent;">
+                <img src="images/팝업스토어 이미지.png" alt="팝업스토어 분석" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="gallery-item-title">팝업스토어 분석</div>
+        </a>
+    </main>
+
+    <!-- 돌아가기 -->
+    <div style="text-align: center; margin-bottom: 80px;" class="fade-up delay-2">
+        <a href="index.html#projects" style="display:inline-block; padding: 1rem 2rem; background: var(--glass-bg); border-radius:30px; font-weight:600; text-decoration:none; color:var(--text-primary); backdrop-filter:blur(10px); border:1px solid var(--glass-border);">← 홈페이지 메인으로 돌아가기</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Jo Soohyun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
