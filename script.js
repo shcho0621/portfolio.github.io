@@ -62,26 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-up');
     fadeElements.forEach(el => observer.observe(el));
 
-    // Modal UI Logic
-    document.querySelectorAll('.modal-trigger').forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            const modalId = this.getAttribute('data-modal');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
-            }
+    // 4. Auto-sort gallery items in Category pages
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (galleryGrid) {
+        const items = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
+        
+        // Sort items using localeCompare for Korean string alphabetical sorting (가나다 순)
+        items.sort((a, b) => {
+            const titleA = a.querySelector('.gallery-item-title').textContent.trim();
+            const titleB = b.querySelector('.gallery-item-title').textContent.trim();
+            return titleA.localeCompare(titleB, 'ko');
         });
-    });
-
-    document.querySelectorAll('.modal-close, .modal-backdrop').forEach(closeBtn => {
-        closeBtn.addEventListener('click', function() {
-            const modal = this.closest('.modal');
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = ''; // 배경 스크롤 복구
-            }
+        
+        // Empty the grid and append sorted items
+        galleryGrid.innerHTML = '';
+        items.forEach(item => {
+            galleryGrid.appendChild(item);
         });
-    });
+    }
 });
